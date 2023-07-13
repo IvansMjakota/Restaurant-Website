@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(29, 29, 39);
+}
+
+.title {
+  margin: 0;
+  font-family: Verdana,sans-serif;
+  color: white;
+  background-color: #15202B;
+  text-align: center;
+  padding: 2%;
+}
+
+/** trash icon **/
+i.icon {
+  color: red;
+  font-size: 1.5em;
+}
+
+.deleteItemButton {
+  background-color: transparent;
+  border: none;
+}
+
+i.icon:hover {
+  color: rgb(129, 0, 0);
+  cursor: pointer;
+}
+
+/** Checkout.html **/
+.checkout-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.checkOutBox {
+  text-align: center;
+  background-color: #172c40;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 40%;
+  font-family: Montserrat;
+  color: white;
+}
+
+.itemRow {
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.headRow {
+  background-color: black;
+}
+
+.arrow {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.itemNumber {
+  display: inline-block;
+}
+
+.itemName {
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+.itemPrice {
+  text-align: right;
+  float: right;
+  width: 15%;
+  height: 100%;
+}
+
+.itemFinalRow {
+  background-color: #15202B;
+  font-weight: 900;
+  margin-bottom: 2%;
+}
+
+.quantity-change {
+  padding-left: 5%;
+}
+
+.checkout-btn {
+  padding: 2%;
+  text-align: center;
+  width: 90%;
+  font-size: 1.1em;
+  color: white;
+  cursor: pointer;
+  border: 1px solid grey;
+  background:#51308a;
+  transition: background-color 0.5s ease;
+  margin-bottom: 2%;
+}
+
+.checkout-btn:hover {
+  background-color: #41039f;
+}
+
+/** completePayment.html **/
+.paymentBox {
+  background-color: #172c40;
+  padding: 1%;
+  text-align: left;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  top: 25%;
+  width: 35%;
+  font-size: 90%;
+  font-family: Montserrat;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+
+select {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.payment-label {
+  font-size: 1em;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+
+input[type="tel"] {
+  width: 100%;
+}
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  float: right;
+  width: 20%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.payButton {
+  padding: 2%;
+  text-align: center;
+  width: 100%;
+  font-size: 1.1em;
+  color: white;
+  cursor: pointer;
+  border: 1px solid grey;
+  background:#51308a;
+  transition: background-color 0.5s ease;
+}
+
+input {
+  width: 90%;
+  border: 1px solid rgb(17 17 17);
+  color: white;
+  padding: 2%;
+  background-color: rgba(17, 23, 23, 1);
+  border-bottom: 2px solid grey;
+}
+
+select {
+  border: 1px solid rgb(17 17 17);
+  color: white;
+  padding: 2%;
+  background-color: rgba(17, 23, 23, 1);
+  border-bottom: 2px solid grey;
+}
+
+.payButton:hover {
+  background-color: #41039f;
+}
+
+.homeButton {
+  background-color: transparent;
+  border-color: rgba(225, 225, 225, 0);
+  border-style: solid;
+  border-width: 4px;
+  border-bottom: none;
+  font-size: 100%;
+  border-top: none;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+
+  transition: border-color 0.7s ease-in;
+}
+
+.homeButton:hover {
+  border-color: white;
+}
+

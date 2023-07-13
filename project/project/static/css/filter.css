@@ -1,0 +1,12 @@
+label[for = filter] {
+    color: white;
+    font-size: 160%;
+    font-family: Montserrat;
+  }
+  
+  .filter {
+    float: middle;
+    position: relative;
+    top: 54px;
+    margin-left: 24%;
+  }

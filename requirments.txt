@@ -1,0 +1,6 @@
+django 
+bitdotio
+requests_toolbelt
+psycopg2 
+django-crispy-forms
+

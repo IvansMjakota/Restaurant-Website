@@ -1,0 +1,142 @@
+* {
+  font-family: Montserrat;
+}
+
+/* Body class of the page */
+.order-container {
+  left: 10%;
+  position: absolute;
+  margin-top: 5%;
+  width: 80%;
+}
+
+.order-box-outer {
+  background-color: transparent;
+  margin: 2%;
+  float: left;
+  width: 350px;
+  height: 260px;
+  font-size: 1em;
+  perspective: 1000px;
+}
+
+.order-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.order-box-outer.rotate  .order-box-inner {
+  transform: rotateY(180deg);
+}
+
+.order-box-front {
+  background-color: #15202B;
+  color: white;
+}
+
+.order-box-back {
+  background-color: #15202B;
+  color: white;
+  opacity: auto;
+  overflow: auto;
+  transform: rotateY(180deg);
+}
+
+/** Hide the scroll bar **/
+.order-box-back::-webkit-scrollbar {
+  display: none;
+}
+
+.order-box-front, .order-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid gray;
+}
+
+.orderdetails {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.ordersummary {
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 2% 2% 2% 2%;
+}
+
+.updatestatus {
+  width: 90%;
+  padding: 2%;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  border: 1px solid grey;
+  background:#51308a;
+  transition: background-color 0.5s ease;
+}
+
+.updatestatus:hover{
+  background-color: #41039f;
+}
+
+.food-text {
+  /* Move text to next line instead of overflowing the box
+  horiziontaly */
+  clear: left;
+}
+
+.view-item-btn {
+  cursor: pointer;
+  padding: 1%;
+  color: white;
+  background:#51308a;
+  border: 1px solid grey;
+  transition: background-color 0.5s ease;
+}
+
+.view-item-btn:hover{
+  background-color: #41039f;
+}
+
+.order-card-head {
+  margin-top: 1%;
+}
+
+.collapsible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid grey;
+  transition: background-color 2s ease;
+}
+
+.collapsible:first-child {
+  margin-top: 2%;
+  border-top: 1px solid grey;
+}
+
+.active, .collapsible:hover {
+  background-color: lightslategray;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(29, 29, 39);
+}

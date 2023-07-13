@@ -1,0 +1,107 @@
+{% extends "base.html" %}{% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/waiterRequest.css' %}" />
+<div class="request-container">
+
+  <h1 class="title">Placed Orders</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Order Id</th>
+          <th>Order Status</th>
+          <th>Time of Order</th>
+          <th>Item Ids</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in Orders %} 
+          {% if order.status == "Placed"%}
+              <tr>
+                <td>{{order.ID}}</td>
+                <td>{{order.status}}</td>
+                <td>{{order.timeOfOrder}}</td>
+                <td>{{order.orderedItems}}</td>
+              </tr>
+          {% endif %} 
+        {% endfor %}
+      </tbody>
+  </table>
+
+  <h1 class="title">Confirmed Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Order Status</th>
+        <th>Time of Order</th>
+        <th>Item Ids</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for order in Orders %} 
+        {% if order.status == "Confirmed" %}
+          <tr>
+            <td>{{order.ID}}</td>
+            <td>{{order.status}}</td>
+            <td>{{order.timeOfOrder}}</td>
+            <td>{{order.orderedItems}}</td>
+          </tr>
+        {% endif %} 
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h1 class="title">Prepared Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Order Status</th>
+        <th>Time of Order</th>
+        <th>Item Ids</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for order in Orders %} 
+        {% if order.status == "Prepared" %}
+            <tr>
+              <td>{{order.ID}}</td>
+              <td>{{order.status}}</td>
+              <td>{{order.timeOfOrder}}</td>
+              <td>{{order.orderedItems}}</td>
+            </tr>
+        {% endif %} 
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+  <h1 class="title">Delivered Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Order Status</th>
+        <th>Time of Order</th>
+        <th>Item Ids</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for order in Orders %} 
+      {% if order.status == "Delivered"%}
+          <tr>
+            <td>{{order.ID}}</td>
+            <td>{{order.status}}</td>
+            <td>{{order.timeOfOrder}}</td>
+            <td>{{order.orderedItems}}</td>
+          </tr>
+       {% endif %} 
+    {% endfor %}
+  </tbody>
+</table>
+
+{% for i in statuses %}
+<script>
+  alert("Your order has been {{i}}");
+</script>
+{% endfor %}
+{% endblock content %}

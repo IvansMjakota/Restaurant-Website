@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(29, 29, 39);
+    height: 100vh;
+    overflow: hidden;
+    font-family: Montserrat;
+}
+
+.center{
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #172c40;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+
+.login {
+    font-family: Verdana,sans-serif;
+    margin-top: 0;
+    color: white;
+    background-color: #15202B;
+    text-align: center;
+    padding: 2%;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.center form div{
+    position: relative;
+    margin: 20px 0;
+}
+
+input { 
+    color: white;
+    background-color: rgba(17, 23, 23, 1);
+    border: 1px solid white;
+    width: 75%;
+    padding: 5%;
+}
+
+.requiredField{
+    border-bottom: 2px solid #adadad;
+    bottom: -20%;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 16px;
+    pointer-events: none;
+    color: #fcf6f6;
+    transition: 1s;
+}
+
+.form-control{
+    width: 100%;
+    font-size: 16px;
+    padding: 3%;
+    border: none;
+    border-bottom: 2px solid #adadad;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 2%;
+    margin-left: 1%;
+    border: 1px solid rgb(82, 82, 82);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background:#51308a;  
+    color: white;
+    background-size: 100% 200%;
+    transition: background-color 1s ease;
+}
+
+form button:hover{
+    background-color: #41039f;
+}
+
+span{
+    display: none;
+}
+
+.alert{
+    color: white;
+    display: flex;
+    font-size: 16px;
+    transform: translateX(-10%);
+}
+.link{
+    color: white;
+    align-items: center;
+    align-content: center;
+    transform: translateX(12%);
+}
+.link a {
+    cursor: pointer;
+    color: #2691d9;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.link a :hover{
+    color: white;
+    transition: 0.5s;
+}

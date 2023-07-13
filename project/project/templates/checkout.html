@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}" />
+<script src="{% static 'javascript/menu.js' %}" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="checkout-container">
+  <div class="checkOutBox">
+    <h1 class="title">Your Basket &#128722;</h1>
+
+    <div class="itemRow headRow">
+      <text class="itemName">Item</text>
+      <text class="itemPrice">Price</text>
+      <text class="itemNumber">Quantity</text>
+    </div>
+
+    {% for i in MenuItems %}
+    <div class="itemRow">
+      <text class="itemName">{{i.0}}</text>
+      <text class="itemPrice" id="{{i.0}} {{i.1}}">£ {{i.1}}</text>
+      <div class="quantity-change">
+        <button class="arrow" onClick="(alterChecout(' {{i.1}}', '{{i.2}}', '{{i.0}}', -1))">&#9664;</button>
+        <text class="itemNumber" id="{{i.0}}"> {{i.2}}</text>
+        <button class="arrow" onClick="(alterChecout(' {{i.1}}', '{{i.2}}', '{{i.0}}', 1))">&#9654;</button>
+
+        <a href="{% url 'checkout' %}">
+          <button type="button" class="deleteItemButton" onclick="deleteItemFromBasket('{{i.0}}');">
+            <i class="fa fa-trash-o icon"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="itemRow itemFinalRow">
+      <text class="itemName">Total</text>
+      <text class="itemPrice" id="TotalPrice">£ {{total}}</text>
+      <text class="itemNumber" id="TotalQuantity">{{items}}</text>
+    </div>
+
+    <form action="{% url 'orderComplete' %}" method="POST" id="menuForm">
+      {% csrf_token %} {{ form.errors }} {{ form.non_field_errors }}
+      <a class="nav-options nav-btn" href="{% url 'orderComplete' %}">
+        <button class="checkout-btn">Checkout</button></a
+      >
+    </form>
+  </div>
+</div>
+{% for i in statuses %}
+<script>
+  alert("Your order has been {{i}}");
+</script>
+{% endfor %}
+{% endblock content %}

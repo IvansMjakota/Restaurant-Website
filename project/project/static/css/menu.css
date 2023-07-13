@@ -1,0 +1,272 @@
+.container {
+  position: relative;
+  padding: 1%;
+  float: left;
+  text-align: left;
+  background-color: #15202B;
+  border: 1px solid gray;
+  width: 26%;
+  color: white;
+  font-size: 75%;
+  font-family: Montserrat;
+  border-color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.container:hover {
+  filter: brightness(110%);
+}
+
+.container img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container.show-image img {
+  opacity: 1;
+}
+
+.container .text {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.container.hide-text .text {
+  opacity: 0;
+}
+
+.titles {
+  position: relative;
+  padding: 1%;
+  margin-top: 10%;
+  margin-bottom: 1%;
+  width: 98%;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  display: table;
+}
+
+.name {
+  margin-left: 1%;
+  float: left;
+  color: white;
+  font-family: Montserrat;
+  font-size: 120%;
+  width: 80%;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  margin: 0;
+  border: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  border-color: white;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#right {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  float: right;
+  width: 20%;
+  text-align: right;
+  color: white;
+  font-family: Montserrat;
+  font-size: 120%;
+  text-decoration: wavy;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(29, 29, 39);
+}
+
+.menuBox {
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.orderBox {
+  padding-top: 1%;
+  height: 40vh;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  width: 30%;
+  background-color: rgb(29, 29, 39);
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.orderHeader {
+  width: 100%;
+  height: 20%;
+  margin: 0;
+  border: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  border-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderingBar {
+  text-align: center;
+  margin-top: 7px;
+  position: static;
+  width: 97%;
+  height: 15%;
+  border: solid;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  border-color: white;
+  padding-top: 5%;
+}
+
+.cross {
+  fill: white;
+  cursor: pointer;
+}
+.basket {
+  fill: white;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.orderButton {
+  width: 35%;
+  height: 100%;
+  float: left;
+  background:#51308a;
+  font-family: Montserrat;
+  font-size: 100%;
+  color: white;
+  border: 1px solid grey;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+}
+
+.orderButton:hover {
+  background-color: #41039f;
+}
+
+.descriptionBox {
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.nutritionBox {
+  width: 100%;
+  height: 3vh;
+}
+
+.form-popup {
+  display: none;
+  float: right;
+  position: relative;
+  top: -34px;
+  left: 642px;
+  border: 3px solid #f1f1f1;
+  z-index: 10;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.btn {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+
+.containerClass {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.imageClass {
+  display: block;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.overlayClass {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20vh;
+  width: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #15202B;
+}
+
+.containerClass:hover .overlayClass {
+  opacity: 1;
+}
+
+.overlayText {
+  padding: 10%;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

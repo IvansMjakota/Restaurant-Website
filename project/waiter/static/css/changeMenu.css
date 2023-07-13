@@ -1,0 +1,129 @@
+body {
+  padding-bottom: 25px;
+}
+
+.menu-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+form {
+  margin-top: 3%;
+  background-color: #172c40;
+  width: 50%;
+  margin-left: 25%;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+select {
+  width: 90%;
+  border: 1px solid rgb(17 17 17);
+  color: white;
+  padding: 2%;
+  background-color: rgba(17, 23, 23, 1);
+  border-bottom: 2px solid grey;
+}
+
+.menuDropDown {
+  padding: 2%;
+  width: 90%;
+  margin-bottom: 2%;
+  border-bottom: 2px solid grey;
+  margin-top: 2%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.input-container {
+  margin-top: 5px;
+}
+
+.inputBox {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.input-label {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+
+button {
+  background-color: white;
+}
+
+input[type="text"] {
+  padding: 2%;
+  background-color: rgba(17, 23, 23, 1);
+  color: white;
+  border: solid;
+  border-color: rgb(17 17 17);
+  width: 90%;
+  border-bottom: 2px solid grey;
+}
+
+input[type="number"] {
+  padding: 2%;
+  background-color: rgba(17, 23, 23, 1);
+  color: white;
+  border: solid;
+  border-color: rgb(17 17 17);
+  width: 90%;
+  border-bottom: 2px solid grey;
+}
+
+textarea {
+  background-color: rgba(17, 23, 23, 1);
+  color: white;
+  border: solid;
+  border-color: rgb(17 17 17);
+  font-family: Montserrat;
+  border-bottom: 2px solid grey;
+  width: 90%;
+}
+
+.itemText {
+  display: table;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+
+.buttonRow {
+  text-align: center;
+}
+
+.submitButton {
+  padding: 1%;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  border: 1px solid grey;
+  background:#51308a;
+  transition: background-color 0.5s ease;
+}
+
+.submitButton:hover {
+  background-color: #41039f;
+}
+
+.submitButton:disabled {
+  cursor: default;
+  background-color: gray;
+}
+
+#menuForm {
+  position: relative;
+  padding-left: 0%;
+  color: white;
+}
